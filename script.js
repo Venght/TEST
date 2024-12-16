@@ -1,24 +1,17 @@
-const link = document.querySelector("a");
-link.textContent = "Mozilla Developer Network";
-link.href = "https://developer.mozilla.org";
+let menu = document.getElementById("menu");
 
-const sect = document.querySelector("section");
-const para = document.querySelector("p");
-para.style.color = "white";
-para.style.backgroundColor = "black";
-para.style.padding = "10px";
-para.style.width = "700px";
-para.style.textAlign = "center";
+menu.addEventListener(`click`, (event) => {
+  let target = event.target;
 
-para.textContent = "We hope you enjoyed the ride";
-sect.appendChild(para);
-
-const text = document.createTextNode (
-    "- the premier source for web development knowledge",
-);
-
-const linkPara = document.querySelector("p");
-linkPara.appendChild(text);
-sect.appendChild(linkPara);
-
-
+  switch (target.id) {
+    case "home":
+      console.log("HOme menu item was clicked");
+      break;
+    case "dashboard":
+      console.log("Dashboard menu item was clicked");
+      break;
+    case "report":
+      console.log("Report menu item was clicked");
+      break;
+  }
+});
